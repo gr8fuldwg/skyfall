@@ -4,7 +4,9 @@
   "description": "this is a project that utilizes NodeJS Server and React to build a weather application.  This will use the DarkSky API and domnstrate keeping secrets a secret.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "node server/",
+    "dev:server": "nodemon server/"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/gr8fuldwg/skyfall/issues"
   },
-  "homepage": "https://github.com/gr8fuldwg/skyfall#readme"
+  "homepage": "https://github.com/gr8fuldwg/skyfall#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
 }
