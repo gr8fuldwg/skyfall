@@ -8,7 +8,7 @@ const port = process.env.PORT || 4000;
 const apiKey = process.env.API_KEY;
 
 // import middleware (powerups!)
-const helmet = process.env.API_KEY;
+const helmet = require("helmet");
 
 //wire up middleware (powerups!)
 app.use(helmet());
