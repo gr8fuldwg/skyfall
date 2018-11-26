@@ -27,10 +27,10 @@ app.get('/forecast/coords/:lat,:lon', (req, res) => {
                 weather: weather
             });
         })
-    .catch(err => {
-        res.status(err.status || 500);
-        res.send(err.message || "Uh oh");
-        })    
+        .catch(err => {
+            res.status(err.status || 500);
+            res.send(err.message || "Uh oh");
+            })    
 });
 
 app.listen(port, () => {
