@@ -31,17 +31,21 @@ class App extends Component {
       })
       .catch(err => {
         this.setState({
-          error: err
+          error: err,
+          loading: false
         });
       });
   }
-  fetchGeoLocation() { }
-
-
+  isGeoError(err) {
+    return err && err.code && err.message;
+  }
   render() {
     const { loading, weather, error } = this.state;
     if(loading){
       return <Loader type="Puff" color="black" height="50%" width="50%" />
+    }
+    if(error && !this.isGeoError(error)) {
+      return <h1>Please try again later...</h1>
     }
     return (
       <div>
