@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { fetchWeather } from './helpers';
 import { getCurrentPosition } from '@blinkmobile/geolocation';
 import Loader from 'react-loader-spinner';
+import DailyWeather from './DailyWeather';
+import HourlyWeather from './HourlyWeather';
+import CurrentWeather from './CurrentWeather';
 import './App.css';
 
 
@@ -86,7 +89,9 @@ class App extends Component {
             />
             <button type="submit">Go!</button>
         </form>
-        <pre>{JSON.stringify(weather, null, 2)}</pre>
+        <CurrentWeather data={weather.currently} />
+        <DailyWeather data={weather.daily} />
+        <HourlyWeather data={weather.hourly} />
       </div>
     );
   }
