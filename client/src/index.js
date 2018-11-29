@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import './weather-icons.css';
-import  './weather-icons-wind.css';
+import 'weather-icons/css/weather-icons.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
