@@ -89,7 +89,7 @@ class App extends Component {
             />
             <button type="submit">Go!</button>
         </form>
-        <CurrentWeather data={weather.currently} />
+        <CurrentWeather lat={lat} lon={lon} data={weather.currently} />
         <DailyWeather data={weather.daily} />
         <HourlyWeather data={weather.hourly} />
       </div>
