@@ -14,7 +14,7 @@ function CurrentWeather(props) {
     const date = new Date(time * 1000)
 
     return (
-        <div className="container-fluid">
+        <div className="containe-fluid">
             <div className="row">
                 <div className="col">
                     <header className="App-header flex-grow">
