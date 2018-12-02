@@ -22,18 +22,18 @@ class App extends Component {
   }
   updateWeather(e) {
     e.preventDefault();
-    const {lat, lon} = this.state;
+    const { lat, lon } = this.state;
     fetchWeather(lat, lon)
-    .then(weather => {
-      this.setState({
-        weather: weather
+      .then(weather => {
+        this.setState({
+          weather: weather
+        });
+      })
+      .catch(err => {
+        this.setState({
+          error: err
+        });
       });
-    })
-    .catch(err => {
-      this.setState({
-        error: err
-      });
-    });
   }
   componentDidMount() {
     getCurrentPosition()
@@ -43,7 +43,7 @@ class App extends Component {
         this.setState({
           lat: lat,
           lon: lon
-        }); 
+        });
         return fetchWeather(lat, lon);
       })
       .then(weather => {
@@ -72,24 +72,27 @@ class App extends Component {
     }
     return (
       <div>
-        <form onSubmit={this.updateWeather}>
-          <input type="number" value={lat}
-            onChange={e => this.setState({ lat: e.target.value })}
-            placeholder="Latitude" 
-            required
-            min="-90"
-            max="90"
+
+        <CurrentWeather lat={lat} lon={lon} data={weather.currently} />
+        <div className="App-header pl-2 pb-4" >
+          <form onSubmit={this.updateWeather}>
+            <input type="number" value={lat}
+              onChange={e => this.setState({ lat: e.target.value })}
+              placeholder="Latitude"
+              required
+              min="-90"
+              max="90"
             />
-          <input type="number" value={lon}
-            onChange={e => this.setState({ lon: e.target.value })}
-            placeholder="Longitude" 
-            required
-            min="-180"
-            max="180"
+            <input type="number" value={lon}
+              onChange={e => this.setState({ lon: e.target.value })}
+              placeholder="Longitude"
+              required
+              min="-180"
+              max="180"
             />
             <button type="submit">Go!</button>
-        </form>
-        <CurrentWeather lat={lat} lon={lon} data={weather.currently} />
+          </form>
+        </div>
         <HourlyWeather data={weather.hourly} />
         <DailyWeather data={weather.daily} />
       </div>

@@ -9,8 +9,20 @@ body {
   
 }
 
+.temp {
+  font-size: 6rem;
+}
+
 .App-header {
   background-color: aqua;
+  color: white;
+}
+
+.lat-lon {
+  font-size: 3rem;
+}
+
+.App-hourly {
   color: white;
 }
 
