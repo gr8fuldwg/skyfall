@@ -77,14 +77,14 @@ class App extends Component {
         <div className="App-header pl-2 pb-4" >
           <form onSubmit={this.updateWeather}>
             <input type="number" value={lat}
-              onChange={e => this.setState({ lat: e.target.value })}
+              onChange={e => this.setState({ lat: parseFloat(e.target.value) })}
               placeholder="Latitude"
               required
               min="-90"
               max="90"
             />
             <input type="number" value={lon}
-              onChange={e => this.setState({ lon: e.target.value })}
+              onChange={e => this.setState({ lon: parseFloat(e.target.value) })}
               placeholder="Longitude"
               required
               min="-180"
