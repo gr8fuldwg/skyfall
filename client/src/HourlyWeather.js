@@ -18,11 +18,9 @@ function HourlyWeather(props) {
     const items = sixHours
         .map(singleHour)
     return (
-        <div className="App-hourly container-fluid bg-dark">
-            <div className="navbar-nav">
-                <div className="row">
-                    <h1 className="col-1 justify-center"> {items} </h1>
-                </div>
+        <div className="App-hourly container-fluid bg-dark ">
+            <div className="row ">
+                <h1 className="col-2"> {items} </h1>
             </div>
         </div>
     )
