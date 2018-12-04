@@ -5,11 +5,12 @@ const singleDay = day => {
     const date = new Date(day.time * 1000)
     return (
         <p key={day.time}>
-        {format(date, ' ddd ')}
-        {day.apparentTemperatureMax}&deg;
-        <p>{day.summary}</p>
-
-    </p>
+            {format(date, ' ddd ')}
+            {day.apparentTemperatureMax}&deg;
+            
+                <span className="summary pl-4">{day.summary}</span>
+            
+        </p>
     )
 }
 
@@ -17,7 +18,7 @@ function DailyWeather(props) {
     const { data } = props.data;
     const days = data.map(singleDay)
     return (
-        <p className="App-daily d-flex justify-content-center align-items-center pl-4">{ days }</p>
+        <p className="App-daily  pl-4">{days}</p>
     )
 }
 

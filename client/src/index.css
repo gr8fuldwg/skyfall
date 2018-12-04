@@ -27,12 +27,17 @@ body {
 }
 
 .App-daily {
-  background-color: darkslategrey;
-  color: bisque;
-  font-size: 2rem;
+  background-color: aquamarine;
+  color: black;
+  font-size: 3em;
   height: 100%;
   width: 100%;
-  
+  font-weight: 500;
+}
+
+.summary {
+  color: white;
+  font-size: 2rem;
 }
 
 code {
