@@ -15,8 +15,7 @@ const singleHour = hour => {
 function HourlyWeather(props) {
     const { data } = props.data;
     const sixHours = data.slice(0, 6);
-    const items = sixHours
-        .map(singleHour)
+    const items = sixHours.map(singleHour)
     return (
         <div className="App-hourly container-fluid bg-dark ">
             <div className="row ">

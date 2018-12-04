@@ -1,11 +1,16 @@
 import React from 'react';
 
+const singleDay = day => {
+    return (
+    <h1>The first day forecast: {day.apparentTemperatureMax}&deg;</h1>
+    )
+}
+
 function DailyWeather(props) {
     const { data } = props.data;
-    const firstDay = data[0];
-    const { apparentTemperatureMax } = firstDay;
+    const days = data.map(singleDay)
     return (
-        <h1>The first day forecast: {apparentTemperatureMax}&deg;</h1>
+        <h3>{ days }</h3>
     )
 }
 
