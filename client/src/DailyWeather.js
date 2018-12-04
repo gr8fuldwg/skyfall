@@ -4,11 +4,12 @@ import format from 'date-fns/format';
 const singleDay = day => {
     const date = new Date(day.time * 1000)
     return (
-        <h1 key={day.time}>
+        <p key={day.time}>
         {format(date, ' ddd ')}
         {day.apparentTemperatureMax}&deg;
+        <p>{day.summary}</p>
 
-    </h1>
+    </p>
     )
 }
 
@@ -16,7 +17,7 @@ function DailyWeather(props) {
     const { data } = props.data;
     const days = data.map(singleDay)
     return (
-        <section>{days}</section>
+        <p className="App-daily d-flex justify-content-center align-items-center pl-4">{ days }</p>
     )
 }
 
