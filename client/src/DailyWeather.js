@@ -7,9 +7,7 @@ const singleDay = day => {
         <p key={day.time}>
             {format(date, ' ddd ')}
             {day.apparentTemperatureMax}&deg;
-            
-                <span className="summary pl-4">{day.summary}</span>
-            
+            <span className="animated pulse summary pl-4">{day.summary}</span>
         </p>
     )
 }
@@ -18,7 +16,7 @@ function DailyWeather(props) {
     const { data } = props.data;
     const days = data.map(singleDay)
     return (
-        <p className="App-daily  pl-4">{days}</p>
+        <p className="App-daily pl-4">{days}</p>
     )
 }
 
