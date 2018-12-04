@@ -6,8 +6,8 @@ const singleDay = day => {
     return (
         <p key={day.time}>
             {format(date, ' ddd ')}
-            {day.apparentTemperatureMax}&deg;
-            <span className="animated pulse summary pl-4">{day.summary}</span>
+            {day.apparentTemperatureMax.toFixed(1)}&deg;
+            <span className="summary pl-4">{day.summary}</span>
         </p>
     )
 }

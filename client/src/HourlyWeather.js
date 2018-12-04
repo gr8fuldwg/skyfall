@@ -19,7 +19,7 @@ function HourlyWeather(props) {
     return (
         <div className="App-hourly container-fluid bg-dark ">
             <div className="row ">
-                <h1 className="col-2"> {items} </h1>
+                <h1 className=" col-2"> {items} </h1>
             </div>
         </div>
     )
