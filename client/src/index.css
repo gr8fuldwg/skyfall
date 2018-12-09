@@ -24,15 +24,21 @@ body {
 
 .App-hourly {
   color: white;
+  font-size: 3rem;
 }
 
 .App-daily {
   background-color: aquamarine;
   color: #212529;
-  font-size: 3em;
+  font-size: 3rem;
   height: 100%;
   width: 100%;
   font-weight: 500;
+}
+
+.App-daily-day {
+  font-size: 3rem;
+  color: black;
 }
 
 .summary {
