@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/gr8fuldwg/skyfall/issues"
   },
-  "homepage": "https://github.com/gr8fuldwg/skyfall#readme",
+  
   "devDependencies": {
     "event-stream": "3.3.4",
     "gh-pages": "^2.0.1",
@@ -42,4 +42,5 @@
     "reactstrap": "^6.5.0"
   },
   "homepage": "https://www.gr8fuldwg.com/skyfall/"
+
 }
