@@ -40,25 +40,21 @@ const singleHour = hour => {
         <p key={hour.time}>
             {format(date, ' ha ')}
             {hour.apparentTemperature.toFixed(0)}&deg;
-
         </p>
     )
 }
-
 
 
 function HourlyWeather(props) {
     const { data } = props.data;
     const sixHours = data.slice(0, 6);
     const items = sixHours.map(singleHour)
+
     return (
         <div className="navbar-nav App-hourly container-fluid bg-dark">
-            <div className="navbar">
+            <div className="nav">
                 <h1 className="App-hourly animated fadeInRight"> {items} </h1>
             </div>
-            {/* <div className="col-12 ">
-                <WeatherIcons className=" pb-4" name="clear" />{renderIcon(icon)}
-            </div> */}
         </div>
     )
 }
