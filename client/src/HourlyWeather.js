@@ -37,10 +37,12 @@ import format from 'date-fns/format';
 const singleHour = hour => {
     const date = new Date(hour.time * 1000)
     return (
-        <p key={hour.time}>
-            {format(date, ' ha ')}
-            {hour.apparentTemperature.toFixed(0)}&deg;
-        </p>
+        <div>
+            <div key={hour.time}>
+                {format(date, ' ha ')}
+                {hour.apparentTemperature.toFixed(0)}&deg;</div>
+            <div className="App-hour-summary">{hour.summary}</div>
+        </div>
     )
 }
 
