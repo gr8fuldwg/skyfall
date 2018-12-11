@@ -6,7 +6,7 @@ const singleDay = day => {
     return (
         <section key={day.time}>
             <span className="App-daily-day">{format(date, ' ddd ')}</span>
-            {day.apparentTemperatureMax.toFixed(1)}&deg;
+            {day.apparentTemperatureMax.toFixed(0)}&deg;
             <div className="animated fadeIn delay-1s summary text-white pl-4">{day.summary}</div>
         </section>
     )

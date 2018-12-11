@@ -19,18 +19,17 @@ function CurrentWeather(props) {
 
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid p-0 m-0">
             <div className="row">
                 <div className="col">
                     <header className="App-header flex-grow">
                         <h1 className="pl-4 pt-4">{format(date, 'MMM DD')}</h1>
-
-                        <div className="h-100">
+                            <div className="h-100">
                             <h3 className="animated fadeInUp lat-lon d-flex justify-content-center">Latitude & Longitude:</h3>
                             <h1 className="animated flip d-flex justify-content-center pb-5">{lat.toFixed(2)} {lon.toFixed(2)}</h1>
                             <div className="col-12 animated pulse infinite d-flex justify-content-center">{renderIcon(icon)}</div>
                             <h1 className="animated slideInUp temp d-flex justify-content-center pb-4">{apparentTemperature.toFixed(0)} &deg;F</h1>
-                            <h3 className="d-flex justify-content-center">Real temp {temperature.toFixed(0)} &deg;</h3>
+                            <h3 className="d-flex justify-content-center">Real temp {temperature.toFixed(0)}&deg;</h3>
                             <h1 className="App-header d-flex justify-content-center pb-4">  { summary } </h1>
                             <h1 className="App-header d-flex justify-content-center pb-4">Chance of rain is {precipProbability}%</h1>
                         </div>

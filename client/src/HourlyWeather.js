@@ -41,7 +41,7 @@ const singleHour = hour => {
             <div key={hour.time}>
                 {format(date, ' ha ')}
                 {hour.apparentTemperature.toFixed(0)}&deg;</div>
-            <div className="App-hour-summary">{hour.summary}</div>
+            <div className="App-hour-summary animated fadeInRight delay-3s">{hour.summary}</div>
         </div>
     )
 }
@@ -53,7 +53,7 @@ function HourlyWeather(props) {
     const items = sixHours.map(singleHour)
 
     return (
-        <div className="navbar-nav App-hourly container-fluid bg-dark">
+        <div className="navbar-nav App-hourly container-fluid bg-dark pl-4">
             <div className="nav">
                 <h1 className="App-hourly animated fadeInRight"> {items} </h1>
             </div>
