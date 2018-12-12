@@ -23,7 +23,7 @@ function CurrentWeather(props) {
             <div className="row">
                 <div className="col">
                     <header className="App-header flex-grow">
-                        <h1 className="pl-4 pt-4">{format(date, 'MMM DD')}</h1>
+                        <div className="date bg-secondary d-flex justify-content-center rounded">{format(date, 'MMM DD')}</div>
                             <div className="h-100">
                             <h3 className="animated fadeInUp lat-lon d-flex justify-content-center">Latitude & Longitude:</h3>
                             <h1 className="animated flip d-flex justify-content-center pb-5">{lat.toFixed(2)} {lon.toFixed(2)}</h1>

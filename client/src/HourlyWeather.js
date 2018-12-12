@@ -9,9 +9,9 @@ const singleHour = hour => {
             <div key={hour.time}>
                 {format(date, ' ha ')}
                 {hour.apparentTemperature.toFixed(0)}&deg;
-                <span className="hour-icon animated flipInX delay-2s pl-4">{renderIcon(hour.icon)}</span>
+                <span className="hour-icon animated pulse infinite slow flipInX delay-2s pl-4">{renderIcon(hour.icon)}</span>
             </div>
-            <div className="App-hour-summary animated fadeInRight delay-3s pl-4">{hour.summary}</div>
+            <div className="App-hour-summary animated fadeInLeft delay-2s pl-4">{hour.summary}</div>
         </div>
     )
 }
