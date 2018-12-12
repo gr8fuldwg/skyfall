@@ -1,38 +1,6 @@
 import React from 'react';
-// import WeatherIcons from 'react-weathericons';
+import { renderIcon } from './helpers';
 import format from 'date-fns/format';
-
-
-// function renderIcon(iconString) {
-//     if (iconString === 'cloudy') {
-//         return <WeatherIcons name="cloud" size="5x" />
-//     }
-//     else if (iconString === 'clear-night') {
-//         return <WeatherIcons name="night-clear" size="5x" />
-//     }
-//     else if (iconString === 'clear-day') {
-//         return <WeatherIcons name="day-sunny" size="5x" />
-//     }
-//     else if (iconString === 'rain') {
-//         return <WeatherIcons name="rain" size="5x" />
-//     }
-//     else if (iconString === 'snow') {
-//         return <WeatherIcons name="snow" size="5x" />
-//     }
-//     else if (iconString === 'sleet') {
-//         return <WeatherIcons name="sleet" size="5x" />
-//     }
-//     else if (iconString === 'fog') {
-//         return <WeatherIcons name="fog" size="5x" />
-//     }
-//     else if (iconString === 'parly-cloudy-night') {
-//         return <WeatherIcons name="night-partly-cloudy" size="5x" />
-//     }
-//     else {
-//         return <WeatherIcons name="sunny" size="5x" />
-//     }
-// }
-
 
 const singleHour = hour => {
     const date = new Date(hour.time * 1000)
@@ -40,12 +8,13 @@ const singleHour = hour => {
         <div>
             <div key={hour.time}>
                 {format(date, ' ha ')}
-                {hour.apparentTemperature.toFixed(0)}&deg;</div>
-            <div className="App-hour-summary animated fadeInRight delay-3s">{hour.summary}</div>
+                {hour.apparentTemperature.toFixed(0)}&deg;
+                <span className="hour-icon pl-4">{renderIcon(hour.icon)}</span>
+            </div>
+            <div className="App-hour-summary animated fadeInRight delay-3s pl-4">{hour.summary}</div>
         </div>
     )
 }
-
 
 function HourlyWeather(props) {
     const { data } = props.data;

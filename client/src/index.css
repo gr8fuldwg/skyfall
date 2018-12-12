@@ -29,6 +29,10 @@ body {
   font-size: 3rem;
 }
 
+.hour-icon {
+  font-size: .5rem;
+}
+
 .App-daily {
   background-color: aquamarine;
   color: #212529;
