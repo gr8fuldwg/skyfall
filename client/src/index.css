@@ -37,14 +37,25 @@ body {
 .App-daily {
   background-color: aquamarine;
   color: #212529;
-  font-size: 3rem;
-  height: 100%;
-  width: 100%;
+  font-size: 5rem;
+  /* height: 100%;
+  width: 100%; */
   font-weight: 500;
 }
 
+.card-group {
+  width: 20%;
+  height: 10%;
+  font-size: 2rem;
+  border: 3px solid black;
+  font-family: monospace;
+  display: inline-block;
+  
+  
+}
+
 .App-daily-day {
-  font-size: 3rem;
+  font-size: 6rem;
   color: black;
 }
 
