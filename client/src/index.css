@@ -57,11 +57,12 @@ body {
 
 
 .card {
-  /* width: 100%; */
+  width: 25%;
   border: 5px solid black !important;
   font-family: monospace;
   flex: unset !important;
   height: 30rem;
+  
 }
 
 .App-daily-day {
@@ -80,6 +81,8 @@ body {
 .summary {
   /* color: white; */
   font-size: 25px;
+  justify-content: center;
+  
 }
 
 code {
