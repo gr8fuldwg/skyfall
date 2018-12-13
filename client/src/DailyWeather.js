@@ -9,12 +9,12 @@ const singleDay = day => {
             <h5 className="App-daily-day card-title d-flex justify-content-center animated flipInX ">{format(date, 'ddd')}</h5>
             <Icon className="card-img-top d-flex justify-content-center animated pulse infinite" iconString={day.icon} />
             <div className="card-body">
-                <p className="card-text animated flipInY delay-1s">
+                <p className="hi-lo card-text animated flipInY delay-1s">
                     Low of {day.apparentTemperatureLow.toFixed(0)}&deg; High of {day.apparentTemperatureMax.toFixed(0)}&deg;
                 </p>
             </div>
             <div className="card-footer h-35 bg-secondary rounded">
-                <p className="card-text animated fadeIn delay-1s summary text-black rounded text-black">{day.summary}</p>
+                <p className="card-text animated fadeIn delay-1s summary text-black rounded text-black pb-2">{day.summary}</p>
             </div>
         </div>
     )
@@ -42,7 +42,7 @@ function DailyWeather(props) {
     const days = data.map(singleDay)
     return (
         <div>
-            <section className="App-daily card-group animated rotateIn rounded-5 pt-2">
+            <section className="App-daily card-group animated rotateIn rounded-5 pt-2 position-relative">
                 {days}
             </section>
         </div>
