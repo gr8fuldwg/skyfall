@@ -11,32 +11,37 @@ export function fetchWeather(lat, lon) {
 
 
 
-export function renderIcon(iconString) {
+export function Icon(props) {
+    const { iconString, className } = props
+    let cs;
+    let name;
     if(iconString === 'cloudy'){
-        return <WeatherIcons className="cloudy" name="cloud" size="5x" />
+        cs = `cloudy ${className}`;
+        name = 'cloud';
+    } else if(iconString === 'clear-night'){
+        cs = `night-clear ${className}`;
+        name = 'night-clear';
+    } else if(iconString === 'clear-day'){
+        cs = `clear-day ${className}`;
+        name = 'day-sunny';
+    } else if(iconString === 'rain'){
+        cs = `rain ${className}`;
+        name = 'rain';
+    } else if(iconString === 'snow'){
+        cs = `snow ${className}`;
+        name = 'snow';
+    } else if(iconString === 'sleet'){
+        cs = `sleet ${className}`;
+        name = 'sleet';
+    } else if(iconString === 'fog'){
+        cs = `fog ${className}`;
+        name = 'fog';
+    } else if(iconString === 'partly-cloudy-night'){
+        cs = `partly-cloudy-night ${className}`;
+        name = 'night-partly-cloudy';
+    } else {
+        cs = `windy ${className}`;
+        name = 'windy';
     }
-    else if(iconString === 'clear-night'){
-        return <WeatherIcons className="night-clear" name="night-clear" size="5x" />
-    }
-    else if(iconString === 'clear-day'){
-        return <WeatherIcons className="clear-day" name="day-sunny" size="5x" />
-    }
-    else if(iconString === 'rain'){
-        return <WeatherIcons className="rain" name="rain" size="5x" />
-    }
-    else if(iconString === 'snow'){
-        return <WeatherIcons className="snow" name="snow" size="5x" />
-    }
-    else if(iconString === 'sleet'){
-        return <WeatherIcons className="sleet" name="sleet" size="5x" />
-    }
-    else if(iconString === 'fog'){
-        return <WeatherIcons className="fog" name="fog" size="5x" />
-    }
-    else if(iconString === 'partly-cloudy-night'){
-        return <WeatherIcons className="partly-cloudy-night" name="night-partly-cloudy" size="5x" />
-    }
-        else {
-        return <WeatherIcons className="windy" name="windy" size="5x" />
-    }
+    return <WeatherIcons className={cs} name={name} size="5x" />
 }

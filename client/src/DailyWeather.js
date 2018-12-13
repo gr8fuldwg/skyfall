@@ -1,27 +1,38 @@
 import React from 'react';
 import format from 'date-fns/format';
-import { renderIcon } from './helpers';
+import { Icon } from './helpers';
 
 const singleDay = day => {
-    const date = new Date(day.time * 1000)
-
+    const date = new Date(day.time * 1000);
     return (
-        <section className="pt-3 pb-3 " key={day.time}>
-            <div className="card-group animated rotateIn rounded-5 ">
-                <div className="card bg-dark text-white">
-                    <h1 className="App-daily-day animated flipInX d-flex justify-content-center">{format(date, ' ddd ')}</h1>
-                    <small className="card-img-top animated pulse infinite d-flex justify-content-center">{renderIcon(day.icon)}</small>
-                    <div className="card-body">
-                        <p className="d-flex justify-content-center animated flipInY delay-1s">
-                            Low of {day.apparentTemperatureLow.toFixed(0)}&deg; High of {day.apparentTemperatureMax.toFixed(0)}&deg;</p>
-                        <div className="card-footer bg-secondary rounded">
-                            <p className="card-text animated fadeIn delay-1s summary text-black">{day.summary}</p>
-                        </div>
-                    </div>
-                </div>
+        <div className="card bg-dark text-white w-25 m-3">
+            <h5 className="App-daily-day card-title d-flex justify-content-center animated flipInX ">{format(date, 'ddd')}</h5>
+            <Icon className="card-img-top d-flex justify-content-center animated pulse infinite" iconString={day.icon} />
+            <div className="card-body">
+                <p className="card-text animated flipInY delay-1s">
+                    Low of {day.apparentTemperatureLow.toFixed(0)}&deg; High of {day.apparentTemperatureMax.toFixed(0)}&deg;
+                </p>
             </div>
-        </section>
+            <div className="card-footer h-35 bg-secondary rounded">
+                <p className="card-text animated fadeIn delay-1s summary text-black rounded text-black">{day.summary}</p>
+            </div>
+        </div>
     )
+    // return (
+
+    //     <div className="card bg-dark text-white m-3" key={day.time}>
+    //         <h1 className=" animated flipInX ">{format(date, ' ddd ')}</h1>
+    //         <small className="card-img-top  ">{renderIcon(day.icon)}</small>
+    //         <div className="card-body">
+    //             <p className=" animated flipInY delay-1s">
+    //                 Low of {day.apparentTemperatureLow.toFixed(0)}&deg; High of {day.apparentTemperatureMax.toFixed(0)}&deg;</p>
+    //             <div className="card-footer bg-secondary rounded">
+    //                 <p className="card-text ">{day.summary}</p>
+    //             </div>
+    //         </div>
+    //     </div>
+
+    // )
 }
 
 
@@ -31,7 +42,9 @@ function DailyWeather(props) {
     const days = data.map(singleDay)
     return (
         <div>
-            <section className="App-daily pl-4">{days}</section>
+            <section className="App-daily card-group animated rotateIn rounded-5 pt-2">
+                {days}
+            </section>
         </div>
     )
 }

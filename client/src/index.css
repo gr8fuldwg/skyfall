@@ -6,7 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 .date {
@@ -31,6 +30,7 @@ body {
 
 .lat-lon {
   font-size: 3rem;
+  
 }
 
 .App-hourly {
@@ -45,21 +45,23 @@ body {
 .App-daily {
   background-color: aquamarine;
   color: #212529;
-  font-size: 5rem;
-  /* height: 20%;
-  width: 100%; */
+  height: 20%;
+  width: 100%;
   font-weight: 500;
+  
 }
 
-.card-group {
+.h-35 {
+  height: 35%;
+}
+
+
+.card {
   width: 25%;
-  height: 10%;
-  font-size: 2rem;
-  border: 5px inset black;
+  border: 5px solid black !important;
   font-family: monospace;
-  
-  
-  
+  flex: unset !important;
+  height: 30rem;
 }
 
 .App-daily-day {
@@ -95,7 +97,7 @@ code {
 }
 
 .rain {
-  color: blue;
+  color: deepskyblue;
 }
 
 .snow {
@@ -125,3 +127,4 @@ code {
   color: rgb(201, 191, 191);
 
 }
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import {renderIcon} from './helpers';
+import { Icon } from './helpers';
 import format from 'date-fns/format';
 
 
@@ -27,7 +27,9 @@ function CurrentWeather(props) {
                             <div className="h-100">
                             <h3 className="animated fadeInUp lat-lon d-flex justify-content-center">Latitude & Longitude:</h3>
                             <h1 className="animated flip d-flex justify-content-center pb-5">{lat.toFixed(2)} {lon.toFixed(2)}</h1>
-                            <div className="col-12 animated pulse infinite d-flex justify-content-center">{renderIcon(icon)}</div>
+                            <div className="col-12 animated pulse infinite d-flex justify-content-center">
+                                <Icon iconString={icon} />
+                            </div>
                             <h1 className="animated slideInUp temp d-flex justify-content-center pb-4">{apparentTemperature.toFixed(0)} &deg;F</h1>
                             <h3 className="d-flex justify-content-center">Real temp {temperature.toFixed(0)}&deg;</h3>
                             <h1 className="App-header d-flex justify-content-center pb-4">  { summary } </h1>
