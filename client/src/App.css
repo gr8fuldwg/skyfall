@@ -1,1 +1,102 @@
 
+/*iPhone 5 */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .App-header {
+        background-color: cadetblue;
+    }
+
+    .date {
+        font-size: 4rem;
+        width: 55%;
+}
+    .lat-lon {
+        font-size: 2rem;
+        padding-top: 2rem;
+}
+    .App-daily {
+        width: 80rem;
+        padding-left: 2.2rem;
+        background-color: blue;
+    }
+    .hi-lo {
+        padding-left: 1.8rem;
+    }
+}
+
+/*iPhone 6/7/8 */
+@media only screen 
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .App-header {
+        background-color: cadetblue;
+    }
+
+    .date {
+        font-size: 4rem;
+        width: 55%;
+}
+    .lat-lon {
+        font-size: 2rem;
+        padding-top: 2rem;
+}
+    .App-daily {
+        width: 80rem;
+        padding-left: 2.2rem;
+        background-color: blue;
+    }
+    .hi-lo {
+        padding-left: 1.8rem;
+    }
+}
+
+/*iPhone 6/7/8Plus */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .App-header {
+        background-color: cadetblue;
+    }
+
+    .date {
+        font-size: 4rem;
+        width: 55%;
+}
+    .lat-lon {
+        font-size: 2rem;
+        padding-top: 2rem;
+}
+    .App-daily {
+        width: 80rem;
+        padding-left: 2.2rem;
+        background-color: blue;
+    }
+    .hi-lo {
+        padding-left: 1.8rem;
+    }
+}
