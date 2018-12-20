@@ -33,7 +33,7 @@ function CurrentWeather(props) {
                             <h1 className="animated slideInUp temp d-flex justify-content-center pb-4">{apparentTemperature.toFixed(0)} &deg;F</h1>
                             <h3 className="d-flex justify-content-center">Real temp {temperature.toFixed(0)}&deg;</h3>
                             <h1 className="App-header d-flex justify-content-center pb-4">  { summary } </h1>
-                            <h1 className="App-header d-flex justify-content-center pb-4">Chance of rain is {precipProbability}%</h1>
+                            <h1 className="App-header precip d-flex justify-content-center pb-4">Chance of rain is {precipProbability}%</h1>
                         </div>
                     </header>
                 </div>

@@ -3,31 +3,53 @@
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 568px) {
-    body {
+   html, body {
         overflow-x: hidden !important;
     }
+
     .container {
         max-width: 100% !important;
         overflow-x: hidden !important;
     }
     
     .App-header {
-        background-color: cadetblue;
+        background-color: blue;
+        color: powderblue;
+        font-weight: 700;
     }
 
     .date {
         font-size: 4rem;
-        width: 55%;
-}
+        width: 60%;
+    }
+
     .lat-lon {
         font-size: 2rem;
         padding-top: 2rem;
-}
+    }
+
+    .temp {
+        font-size: 7rem;
+    }
+
+    .precip {
+        padding-left: 1rem;
+    }
+
     .App-daily {
-        width: 80rem;
-        padding-left: 2.2rem;
+        width: 69rem;
+        padding-left: .5rem;
         background-color: blue;
     }
+    
+    .daily-height {
+        height: ;
+    }
+
+    .icon {
+
+    }
+
     .hi-lo {
         padding-left: 1.8rem;
     }
@@ -37,9 +59,10 @@ and (max-device-width: 568px) {
 @media only screen 
 and (min-device-width: 375px)
 and (max-device-width: 667px) {
-    body {
+     body {
         overflow-x: hidden !important;
     }
+
     .container {
         max-width: 100% !important;
         overflow-x: hidden !important;
@@ -52,16 +75,19 @@ and (max-device-width: 667px) {
     .date {
         font-size: 4rem;
         width: 55%;
-}
+    }
+
     .lat-lon {
         font-size: 2rem;
         padding-top: 2rem;
-}
+    }
+
     .App-daily {
         width: 80rem;
-        padding-left: 2.2rem;
+        padding-left: .85rem;
         background-color: blue;
     }
+
     .hi-lo {
         padding-left: 1.8rem;
     }
@@ -71,9 +97,10 @@ and (max-device-width: 667px) {
 @media only screen 
 and (min-device-width: 414px) 
 and (max-device-width: 736px) {
-    body {
+    html, body {
         overflow-x: hidden !important;
     }
+
     .container {
         max-width: 100% !important;
         overflow-x: hidden !important;
@@ -86,17 +113,28 @@ and (max-device-width: 736px) {
     .date {
         font-size: 4rem;
         width: 55%;
-}
+    }
+
     .lat-lon {
         font-size: 2rem;
         padding-top: 2rem;
-}
+    }
+
     .App-daily {
         width: 80rem;
         padding-left: 2.2rem;
         background-color: blue;
     }
+
     .hi-lo {
         padding-left: 1.8rem;
+    }
+
+    .card {
+        width: 25%;
+        border: 5px solid black !important;
+        font-family: monospace;
+        flex: unset !important;
+        height: 33rem;
     }
 }
