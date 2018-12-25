@@ -42,17 +42,20 @@ and (max-device-width: 568px) {
         background-color: blue;
     }
     
-    .daily-height {
-        height: ;
-    }
+    
 
-    .icon {
-
+    .card {
+        width: 25%;
+        border: 5px solid black !important;
+        font-family: monospace;
+        flex: unset !important;
+        height: 33rem;
     }
 
     .hi-lo {
         padding-left: 1.8rem;
     }
+    
 }
 
 /*iPhone 6/7/8 */
