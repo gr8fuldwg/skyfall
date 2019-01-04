@@ -14,7 +14,7 @@ const singleDay = day => {
                 </p>
             </div>
             <div className="pl-3 pr-3 pb-2 daily-height">
-                <div className="card-footer  pl-4 pb-4  bg-secondary rounded">
+                <div className="card-footer  pl-4 pb-1  bg-secondary rounded">
                     <p className="card-text d-flex justify-content-center animated fadeIn delay-1s summary text-black rounded text-black pb-2">{day.summary}</p>
                 </div>
             </div>

@@ -50,7 +50,7 @@ body {
 .App-daily {
   background-color: aquamarine;
   color: #212529;
-  height: 35%;
+  height: 50%;
   width: 100%;
   font-weight: 500;
   
@@ -66,7 +66,7 @@ body {
   border: 5px solid black !important;
   font-family: monospace;
   flex: unset !important;
-  height: 34rem;
+  height: 38rem;
   
 }
 
