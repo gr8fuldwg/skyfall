@@ -38,6 +38,11 @@ body {
   font-size: 3rem;
 }
 
+.icon {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .hour-icon {
   font-size: .5rem;
 }
@@ -61,7 +66,7 @@ body {
   border: 5px solid black !important;
   font-family: monospace;
   flex: unset !important;
-  height: 30rem;
+  height: 34rem;
   
 }
 
@@ -100,7 +105,7 @@ code {
 }
 
 .night-clear {
-  
+  color: white;
 }
 
 .clear-day {
@@ -120,7 +125,7 @@ code {
 }
 
 .fog {
-
+  color: gray;
 }
 
 .partly-cloudy-night {
@@ -129,7 +134,7 @@ code {
 }
 
 .windy {
-
+  color: white;
 }
 
 .App-hour-summary {
