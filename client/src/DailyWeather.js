@@ -40,7 +40,6 @@ const singleDay = day => {
 
 function DailyWeather(props) {
     const { data } = props.data;
-
     const days = data.map(singleDay)
     return (
         <div>
